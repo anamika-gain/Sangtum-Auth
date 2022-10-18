@@ -12,7 +12,8 @@ class EmployeeController extends Controller
   
     public function allEmployee()
     {
-      
+        $employee = Employee::all();
+        return view('employee.import-form',compact('employee'));
     }
     public function addEmployee()
     {
